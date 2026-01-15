@@ -1,0 +1,27 @@
+# GPU-accelerated scraper dependencies
+# Install with: pip install -r requirements_gpu.txt
+
+# Core dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+firecrawl-py>=0.0.16
+
+# GPU acceleration (CUDA)
+cupy-cuda12x>=12.0.0  # For CUDA 12.x
+# Alternative for CUDA 11.x:
+# cupy-cuda11x>=11.0.0
+
+# Async HTTP processing
+aiohttp>=3.8.0
+asyncio
+
+# Optional: For better performance
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Installation notes:
+# 1. Install CUDA toolkit first: https://developer.nvidia.com/cuda-downloads
+# 2. Verify CUDA installation: nvidia-smi
+# 3. Install CuPy: pip install cupy-cuda12x (or cupy-cuda11x for CUDA 11.x)
+# 4. Test GPU: python -c "import cupy; print(cupy.cuda.runtime.getDeviceCount())"
+
